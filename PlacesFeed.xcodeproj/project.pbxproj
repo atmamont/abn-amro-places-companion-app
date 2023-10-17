@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		75625F5A2ADE76C800F3E589 /* PlacesFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75625F512ADE76C800F3E589 /* PlacesFeed.framework */; };
-		75625F5F2ADE76C800F3E589 /* PlacesFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75625F5E2ADE76C800F3E589 /* PlacesFeedTests.swift */; };
-		75625F602ADE76C800F3E589 /* PlacesFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = 75625F542ADE76C800F3E589 /* PlacesFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,9 +22,8 @@
 
 /* Begin PBXFileReference section */
 		75625F512ADE76C800F3E589 /* PlacesFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlacesFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		75625F542ADE76C800F3E589 /* PlacesFeed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlacesFeed.h; sourceTree = "<group>"; };
 		75625F592ADE76C800F3E589 /* PlacesFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlacesFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		75625F5E2ADE76C800F3E589 /* PlacesFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesFeedTests.swift; sourceTree = "<group>"; };
+		75625F692ADE771700F3E589 /* PlacesFeed.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = PlacesFeed.xctestplan; path = TestPlans/PlacesFeed.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +48,7 @@
 		75625F472ADE76C800F3E589 = {
 			isa = PBXGroup;
 			children = (
+				75625F692ADE771700F3E589 /* PlacesFeed.xctestplan */,
 				75625F532ADE76C800F3E589 /* PlacesFeed */,
 				75625F5D2ADE76C800F3E589 /* PlacesFeedTests */,
 				75625F522ADE76C800F3E589 /* Products */,
@@ -69,7 +67,6 @@
 		75625F532ADE76C800F3E589 /* PlacesFeed */ = {
 			isa = PBXGroup;
 			children = (
-				75625F542ADE76C800F3E589 /* PlacesFeed.h */,
 			);
 			path = PlacesFeed;
 			sourceTree = "<group>";
@@ -77,7 +74,6 @@
 		75625F5D2ADE76C800F3E589 /* PlacesFeedTests */ = {
 			isa = PBXGroup;
 			children = (
-				75625F5E2ADE76C800F3E589 /* PlacesFeedTests.swift */,
 			);
 			path = PlacesFeedTests;
 			sourceTree = "<group>";
@@ -89,7 +85,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75625F602ADE76C800F3E589 /* PlacesFeed.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,7 +193,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75625F5F2ADE76C800F3E589 /* PlacesFeedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

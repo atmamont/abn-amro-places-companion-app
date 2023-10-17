@@ -1,0 +1,32 @@
+{
+  "configurations" : [
+    {
+      "id" : "A1A3E572-4A51-4B47-8931-87460E87491B",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:PlacesFeed.xcodeproj",
+          "identifier" : "75625F502ADE76C800F3E589",
+          "name" : "PlacesFeed"
+        }
+      ]
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:PlacesFeed.xcodeproj",
+        "identifier" : "75625F582ADE76C800F3E589",
+        "name" : "PlacesFeedTests"
+      }
+    }
+  ],
+  "version" : 1
+}
