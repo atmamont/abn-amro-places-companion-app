@@ -7,14 +7,14 @@
 
 import Foundation
 
-public struct PlaceItem: Equatable {
+public struct Location: Equatable {
     public let latitude: Double
     public let longitude: Double
     public let name: String
 }
 
-public protocol PlacesLoader {
-    typealias LoadResult = Result<[PlaceItem], Error>
+public protocol FeedLoader {
+    typealias LoadResult = Result<[Location], Error>
 
     func load(completion: @escaping (LoadResult) -> Void)
 }
