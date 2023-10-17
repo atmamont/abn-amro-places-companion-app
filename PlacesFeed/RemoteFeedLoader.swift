@@ -69,6 +69,6 @@ struct RemoteLocation: Decodable {
 
 extension Array where Element == RemoteLocation {
     func toModels() -> [Location] {
-        map { Location(latitude: $0.lat, longitude: $0.long, name: $0.name) }
+        map { Location(name: $0.name, latitude: $0.lat, longitude: $0.long) }
     }
 }
