@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		75559C902ADE797B005C7AF5 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75559C8F2ADE797B005C7AF5 /* HTTPClient.swift */; };
+		75559C922ADE7997005C7AF5 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75559C912ADE7997005C7AF5 /* URLSessionHTTPClient.swift */; };
+		75559C942ADE79B4005C7AF5 /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75559C932ADE79B4005C7AF5 /* URLSessionHTTPClientTests.swift */; };
+		75559C962ADE79E8005C7AF5 /* XCTestCase+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75559C952ADE79E8005C7AF5 /* XCTestCase+Helpers.swift */; };
 		75625F5A2ADE76C800F3E589 /* PlacesFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75625F512ADE76C800F3E589 /* PlacesFeed.framework */; };
 		75625F6B2ADE77F100F3E589 /* PlacesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75625F6A2ADE77F100F3E589 /* PlacesLoader.swift */; };
 /* End PBXBuildFile section */
@@ -22,6 +26,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		75559C8F2ADE797B005C7AF5 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		75559C912ADE7997005C7AF5 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
+		75559C932ADE79B4005C7AF5 /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
+		75559C952ADE79E8005C7AF5 /* XCTestCase+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Helpers.swift"; sourceTree = "<group>"; };
 		75625F512ADE76C800F3E589 /* PlacesFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlacesFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75625F592ADE76C800F3E589 /* PlacesFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlacesFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75625F692ADE771700F3E589 /* PlacesFeed.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = PlacesFeed.xctestplan; path = TestPlans/PlacesFeed.xctestplan; sourceTree = "<group>"; };
@@ -70,6 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				75625F6A2ADE77F100F3E589 /* PlacesLoader.swift */,
+				75559C8F2ADE797B005C7AF5 /* HTTPClient.swift */,
+				75559C912ADE7997005C7AF5 /* URLSessionHTTPClient.swift */,
 			);
 			path = PlacesFeed;
 			sourceTree = "<group>";
@@ -77,6 +87,8 @@
 		75625F5D2ADE76C800F3E589 /* PlacesFeedTests */ = {
 			isa = PBXGroup;
 			children = (
+				75559C932ADE79B4005C7AF5 /* URLSessionHTTPClientTests.swift */,
+				75559C952ADE79E8005C7AF5 /* XCTestCase+Helpers.swift */,
 			);
 			path = PlacesFeedTests;
 			sourceTree = "<group>";
@@ -146,6 +158,7 @@
 					};
 					75625F582ADE76C800F3E589 = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
@@ -190,7 +203,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75559C902ADE797B005C7AF5 /* HTTPClient.swift in Sources */,
 				75625F6B2ADE77F100F3E589 /* PlacesLoader.swift in Sources */,
+				75559C922ADE7997005C7AF5 /* URLSessionHTTPClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +213,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75559C962ADE79E8005C7AF5 /* XCTestCase+Helpers.swift in Sources */,
+				75559C942ADE79B4005C7AF5 /* URLSessionHTTPClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +423,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4TDY757HQH;
@@ -414,6 +432,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andrii-mamchenko.places-feed-assignment.PlacesFeedTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -423,6 +442,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4TDY757HQH;
