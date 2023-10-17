@@ -15,6 +15,7 @@
 		75559C9A2ADE7ADE005C7AF5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75559C992ADE7ADE005C7AF5 /* API.swift */; };
 		75559C9C2ADE8210005C7AF5 /* RemoteFeedLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75559C9B2ADE8210005C7AF5 /* RemoteFeedLoaderTests.swift */; };
 		75559C9E2ADE82C8005C7AF5 /* HTTPClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75559C9D2ADE82C8005C7AF5 /* HTTPClientSpy.swift */; };
+		75559CA02ADE83E8005C7AF5 /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = 75559C9F2ADE83E8005C7AF5 /* README.MD */; };
 		75625F5A2ADE76C800F3E589 /* PlacesFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75625F512ADE76C800F3E589 /* PlacesFeed.framework */; };
 		75625F6B2ADE77F100F3E589 /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75625F6A2ADE77F100F3E589 /* FeedLoader.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		75559C992ADE7ADE005C7AF5 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		75559C9B2ADE8210005C7AF5 /* RemoteFeedLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoaderTests.swift; sourceTree = "<group>"; };
 		75559C9D2ADE82C8005C7AF5 /* HTTPClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientSpy.swift; sourceTree = "<group>"; };
+		75559C9F2ADE83E8005C7AF5 /* README.MD */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
 		75625F512ADE76C800F3E589 /* PlacesFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlacesFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75625F592ADE76C800F3E589 /* PlacesFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlacesFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75625F692ADE771700F3E589 /* PlacesFeed.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = PlacesFeed.xctestplan; path = TestPlans/PlacesFeed.xctestplan; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 		75625F472ADE76C800F3E589 = {
 			isa = PBXGroup;
 			children = (
+				75559C9F2ADE83E8005C7AF5 /* README.MD */,
 				75625F692ADE771700F3E589 /* PlacesFeed.xctestplan */,
 				75625F532ADE76C800F3E589 /* PlacesFeed */,
 				75625F5D2ADE76C800F3E589 /* PlacesFeedTests */,
@@ -205,6 +208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75559CA02ADE83E8005C7AF5 /* README.MD in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
