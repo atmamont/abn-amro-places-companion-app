@@ -40,9 +40,9 @@
 		75559C9B2ADE8210005C7AF5 /* RemoteFeedLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoaderTests.swift; sourceTree = "<group>"; };
 		75559C9D2ADE82C8005C7AF5 /* HTTPClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientSpy.swift; sourceTree = "<group>"; };
 		75559C9F2ADE83E8005C7AF5 /* README.MD */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
+		75559CA52AE007CA005C7AF5 /* PlacesFeed.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = PlacesFeed.xctestplan; sourceTree = "<group>"; };
 		75625F512ADE76C800F3E589 /* PlacesFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlacesFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75625F592ADE76C800F3E589 /* PlacesFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlacesFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		75625F692ADE771700F3E589 /* PlacesFeed.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = PlacesFeed.xctestplan; path = TestPlans/PlacesFeed.xctestplan; sourceTree = "<group>"; };
 		75625F6A2ADE77F100F3E589 /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,13 +65,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		75559CA22AE00791005C7AF5 /* TestPlans */ = {
+			isa = PBXGroup;
+			children = (
+				75559CA52AE007CA005C7AF5 /* PlacesFeed.xctestplan */,
+			);
+			path = TestPlans;
+			sourceTree = "<group>";
+		};
 		75625F472ADE76C800F3E589 = {
 			isa = PBXGroup;
 			children = (
 				75559C9F2ADE83E8005C7AF5 /* README.MD */,
-				75625F692ADE771700F3E589 /* PlacesFeed.xctestplan */,
 				75625F532ADE76C800F3E589 /* PlacesFeed */,
 				75625F5D2ADE76C800F3E589 /* PlacesFeedTests */,
+				75559CA22AE00791005C7AF5 /* TestPlans */,
 				75625F522ADE76C800F3E589 /* Products */,
 			);
 			sourceTree = "<group>";
