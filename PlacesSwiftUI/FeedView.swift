@@ -17,17 +17,24 @@ struct FeedView: View {
                 ProgressView()
             } else {
                 List(feed.items) { location in
-                    VStack {
-                        if let name = location.name {
-                            Text(name)
+                    HStack(alignment: .firstTextBaseline) {
+                        Image(systemName: "location.circle")
+                        VStack(alignment: .listRowSeparatorLeading) {
+                            if let name = location.name {
+                                Text(name)
+                                    .font(.title)
+                            }
+                            VStack(alignment: .listRowSeparatorLeading)
+                            {
+                                Text("Latitude: \(location.latitude)")
+                                    .font(.subheadline)
+                                Text("Longitude: \(location.longitude)")
+                                    .font(.subheadline)
+                            }
                         }
-                        HStack {
-                            Text("\(location.latitude)")
-                            Text("\(location.longitude)")
+                        .onTapGesture {
+                            feed.openExternalURL(for: location)
                         }
-                    }
-                    .onTapGesture {
-                        feed.openExternalURL(for: location)
                     }
                 }
                 .navigationTitle("Locations")
