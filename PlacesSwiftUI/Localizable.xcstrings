@@ -71,7 +71,11 @@
         }
       }
     },
+    "Pick location" : {
+
+    },
     "Pick location to open in Wikipedia" : {
+      "extractionState" : "stale",
       "localizations" : {
         "uk" : {
           "stringUnit" : {
