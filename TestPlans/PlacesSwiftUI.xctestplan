@@ -1,0 +1,28 @@
+{
+  "configurations" : [
+    {
+      "id" : "AF853E62-D178-45E2-A393-0BE2EADB55B8",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Places.xcodeproj",
+      "identifier" : "75559CA92AE00849005C7AF5",
+      "name" : "PlacesSwiftUI"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Places.xcodeproj",
+        "identifier" : "75559CB82AE0084A005C7AF5",
+        "name" : "PlacesSwiftUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

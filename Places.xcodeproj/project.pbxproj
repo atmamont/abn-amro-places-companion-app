@@ -20,7 +20,6 @@
 		75559CAF2AE00849005C7AF5 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75559CAE2AE00849005C7AF5 /* FeedView.swift */; };
 		75559CB12AE0084A005C7AF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75559CB02AE0084A005C7AF5 /* Assets.xcassets */; };
 		75559CB42AE0084A005C7AF5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75559CB32AE0084A005C7AF5 /* Preview Assets.xcassets */; };
-		75559CBE2AE0084A005C7AF5 /* PlacesSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75559CBD2AE0084A005C7AF5 /* PlacesSwiftUITests.swift */; };
 		75559CD52AE0085C005C7AF5 /* PlacesFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75625F512ADE76C800F3E589 /* PlacesFeed.framework */; platformFilter = ios; };
 		75559CD62AE0085C005C7AF5 /* PlacesFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 75625F512ADE76C800F3E589 /* PlacesFeed.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		75559CDB2AE00C8F005C7AF5 /* LocationFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75559CDA2AE00C8F005C7AF5 /* LocationFeedViewModel.swift */; };
@@ -29,6 +28,7 @@
 		7560AA462AE15A9C008986AE /* FeedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7560AA452AE15A9C008986AE /* FeedRow.swift */; };
 		7560AA482AE172AD008986AE /* ExternalURLProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7560AA472AE172AD008986AE /* ExternalURLProvider.swift */; };
 		7560AA502AE181CC008986AE /* FeedViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7560AA4F2AE181CC008986AE /* FeedViewModels.swift */; };
+		7560AA532AE1834D008986AE /* LocationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7560AA522AE1834D008986AE /* LocationViewModelTests.swift */; };
 		75625F5A2ADE76C800F3E589 /* PlacesFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75625F512ADE76C800F3E589 /* PlacesFeed.framework */; };
 		75625F6B2ADE77F100F3E589 /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75625F6A2ADE77F100F3E589 /* FeedLoader.swift */; };
 /* End PBXBuildFile section */
@@ -88,7 +88,6 @@
 		75559CB02AE0084A005C7AF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75559CB32AE0084A005C7AF5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		75559CB92AE0084A005C7AF5 /* PlacesSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlacesSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		75559CBD2AE0084A005C7AF5 /* PlacesSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesSwiftUITests.swift; sourceTree = "<group>"; };
 		75559CDA2AE00C8F005C7AF5 /* LocationFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFeedViewModel.swift; sourceTree = "<group>"; };
 		75559CDC2AE0135F005C7AF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7560AA412AE11659008986AE /* FeedUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIComposer.swift; sourceTree = "<group>"; };
@@ -96,6 +95,8 @@
 		7560AA452AE15A9C008986AE /* FeedRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRow.swift; sourceTree = "<group>"; };
 		7560AA472AE172AD008986AE /* ExternalURLProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalURLProvider.swift; sourceTree = "<group>"; };
 		7560AA4F2AE181CC008986AE /* FeedViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModels.swift; sourceTree = "<group>"; };
+		7560AA522AE1834D008986AE /* LocationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModelTests.swift; sourceTree = "<group>"; };
+		7560AA542AE1868D008986AE /* PlacesSwiftUI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = PlacesSwiftUI.xctestplan; path = TestPlans/PlacesSwiftUI.xctestplan; sourceTree = "<group>"; };
 		75625F512ADE76C800F3E589 /* PlacesFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlacesFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75625F592ADE76C800F3E589 /* PlacesFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlacesFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75625F6A2ADE77F100F3E589 /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
@@ -170,7 +171,7 @@
 		75559CBC2AE0084A005C7AF5 /* PlacesSwiftUITests */ = {
 			isa = PBXGroup;
 			children = (
-				75559CBD2AE0084A005C7AF5 /* PlacesSwiftUITests.swift */,
+				7560AA522AE1834D008986AE /* LocationViewModelTests.swift */,
 			);
 			path = PlacesSwiftUITests;
 			sourceTree = "<group>";
@@ -230,6 +231,7 @@
 		75625F472ADE76C800F3E589 = {
 			isa = PBXGroup;
 			children = (
+				7560AA542AE1868D008986AE /* PlacesSwiftUI.xctestplan */,
 				75559C9F2ADE83E8005C7AF5 /* README.MD */,
 				75625F532ADE76C800F3E589 /* PlacesFeed */,
 				75625F5D2ADE76C800F3E589 /* PlacesFeedTests */,
@@ -461,7 +463,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75559CBE2AE0084A005C7AF5 /* PlacesSwiftUITests.swift in Sources */,
+				7560AA532AE1834D008986AE /* LocationViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
