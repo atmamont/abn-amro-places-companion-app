@@ -32,7 +32,7 @@ public class LocationFeedViewModel: FeedViewModel {
     private func map(_ feed: [Location]) -> [LocationViewModel] {
         feed.map {
             LocationViewModel(
-                name: $0.name,
+                name: $0.name ?? "",
                 latitude: "\($0.latitude)",
                 longitude: "\($0.longitude)"
             )

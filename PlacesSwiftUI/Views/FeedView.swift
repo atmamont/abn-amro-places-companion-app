@@ -22,7 +22,11 @@ struct FeedView: View {
                             openExternalURL(for: location)
                     }
                 }
-                .navigationTitle("Locations")
+                .navigationTitle("Pick location to open in Wikipedia")
+                .toolbar(content: {
+                    NavigationLink("Open custom location", destination: CustomLocationView(viewModel: LocationViewModel(), urlProvider: urlProvider))
+                                  
+                })
             }
         }
         .navigationViewStyle(.stack)
@@ -42,7 +46,7 @@ struct FeedView: View {
     FeedView(feed: LocationFeedViewModel.prototype, urlProvider: MockURLProvider())
 }
 
-private final class MockURLProvider: URLProvider {
+final class MockURLProvider: URLProvider {
     func makeURL(from location: LocationViewModel) -> URL {
         URL(string: "http://any-url.com")!
     }

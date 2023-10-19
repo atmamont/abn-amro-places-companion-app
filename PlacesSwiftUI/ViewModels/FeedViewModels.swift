@@ -15,17 +15,21 @@ public protocol FeedViewModel {
 }
 
 public struct LocationViewModel: Equatable {
-    let name: String?
-    let latitude: String
-    let longitude: String
+    var name: String
+    var latitude: String
+    var longitude: String
     
-    public init(name: String? = nil, latitude: String, longitude: String) {
+    public init(name: String, latitude: String, longitude: String) {
         self.name = name
         self.latitude = latitude
         self.longitude = longitude
     }
     
-    public init(name: String? = nil, latitude: Double, longitude: Double) {
+    public init(name: String, latitude: Double, longitude: Double) {
         self.init(name: name, latitude: "\(latitude)", longitude: "\(longitude)")
+    }
+    
+    init() {
+        self.init(name: "", latitude: "", longitude: "")
     }
 }

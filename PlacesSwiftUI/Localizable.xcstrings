@@ -1,6 +1,16 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Latitude" : {
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Широта"
+          }
+        }
+      }
+    },
     "Latitude: %@" : {
       "localizations" : {
         "uk" : {
@@ -11,12 +21,12 @@
         }
       }
     },
-    "Locations" : {
+    "Longitude" : {
       "localizations" : {
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Локації"
+            "value" : "Довгота"
           }
         }
       }
@@ -27,6 +37,46 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Довгота: %@"
+          }
+        }
+      }
+    },
+    "Name" : {
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Назва"
+          }
+        }
+      }
+    },
+    "Open" : {
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Відкрити"
+          }
+        }
+      }
+    },
+    "Open custom location" : {
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Відкрити довільну локацію"
+          }
+        }
+      }
+    },
+    "Pick location to open in Wikipedia" : {
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вберіть локацію щоб відкрити у Вікіпедії"
           }
         }
       }

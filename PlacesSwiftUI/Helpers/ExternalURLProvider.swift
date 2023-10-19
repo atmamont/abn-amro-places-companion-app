@@ -23,8 +23,8 @@ final class ExternalURLProvider: URLProvider {
     private func makeQueryItems(from location: LocationViewModel) -> [URLQueryItem] {
         var items = [URLQueryItem(name: "latitude", value: location.latitude),
                      URLQueryItem(name: "longitude", value: location.latitude)]
-        if let name = location.name {
-            items.append(URLQueryItem(name: "name", value: name))
+        if !location.name.isEmpty {
+            items.append(URLQueryItem(name: "name", value: location.name))
         }
         return items
     }

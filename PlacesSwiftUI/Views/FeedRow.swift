@@ -14,8 +14,8 @@ struct FeedRow: View {
         HStack(alignment: .firstTextBaseline) {
             Image(systemName: "location.circle")
             VStack(alignment: .listRowSeparatorLeading) {
-                if let name = location.name {
-                    Text(name)
+                if !location.name.isEmpty {
+                    Text(location.name)
                         .font(.title)
                 }
                 VStack(alignment: .listRowSeparatorLeading)
@@ -35,7 +35,7 @@ struct FeedRow: View {
     VStack {
         FeedRow(
             location: LocationViewModel(
-                name: nil,
+                name: "",
                 latitude: "1.2323",
                 longitude: "1.324343"
             )
