@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol ExternalURLProviding {
+protocol URLProvider {
     func makeURL(from location: LocationViewModel) -> URL
 }
 
-final class ExternalURLProvider: ExternalURLProviding {
+final class ExternalURLProvider: URLProvider {
     func makeURL(from location: LocationViewModel) -> URL {
         var components = URLComponents()
         components.scheme = "wikpedia"

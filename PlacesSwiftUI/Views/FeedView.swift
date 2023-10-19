@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FeedView: View {
     @State var feed: FeedViewModel
+    let urlProvider: URLProvider
     
     var body: some View {
         NavigationView {
@@ -18,7 +19,7 @@ struct FeedView: View {
                 List(feed.items) { location in
                     FeedRow(location: location)
                         .onTapGesture {
-                            feed.openExternalURL(for: location)
+                            openExternalURL(for: location)
                     }
                 }
                 .navigationTitle("Locations")
@@ -27,9 +28,22 @@ struct FeedView: View {
         .navigationViewStyle(.stack)
         .onAppear(perform: feed.loadFeed)
     }
+    
+    private func openExternalURL(for location: LocationViewModel) {
+        let externalURL = urlProvider.makeURL(from: location)
+        if UIApplication.shared.canOpenURL(externalURL) {
+            UIApplication.shared.open(externalURL)
+        }
+    }
+
 }
 
 #Preview {
-    FeedView(feed: FeedViewModel.prototype)
+    FeedView(feed: LocationFeedViewModel.prototype, urlProvider: MockURLProvider())
 }
 
+private final class MockURLProvider: URLProvider {
+    func makeURL(from location: LocationViewModel) -> URL {
+        URL(string: "http://any-url.com")!
+    }
+}
