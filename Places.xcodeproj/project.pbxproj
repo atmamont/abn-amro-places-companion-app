@@ -97,7 +97,7 @@
 		7560AA472AE172AD008986AE /* ExternalURLProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalURLProvider.swift; sourceTree = "<group>"; };
 		7560AA4F2AE181CC008986AE /* FeedViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModels.swift; sourceTree = "<group>"; };
 		7560AA522AE1834D008986AE /* LocationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModelTests.swift; sourceTree = "<group>"; };
-		7560AA542AE1868D008986AE /* PlacesSwiftUI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = PlacesSwiftUI.xctestplan; path = TestPlans/PlacesSwiftUI.xctestplan; sourceTree = "<group>"; };
+		7560AA542AE1868D008986AE /* PlacesSwiftUI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = PlacesSwiftUI.xctestplan; sourceTree = "<group>"; };
 		75625F512ADE76C800F3E589 /* PlacesFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlacesFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75625F592ADE76C800F3E589 /* PlacesFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlacesFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75625F6A2ADE77F100F3E589 /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
@@ -140,6 +140,7 @@
 		75559CA22AE00791005C7AF5 /* TestPlans */ = {
 			isa = PBXGroup;
 			children = (
+				7560AA542AE1868D008986AE /* PlacesSwiftUI.xctestplan */,
 				75559CA52AE007CA005C7AF5 /* PlacesFeed.xctestplan */,
 			);
 			path = TestPlans;
@@ -232,7 +233,6 @@
 		75625F472ADE76C800F3E589 = {
 			isa = PBXGroup;
 			children = (
-				7560AA542AE1868D008986AE /* PlacesSwiftUI.xctestplan */,
 				75559C9F2ADE83E8005C7AF5 /* README.MD */,
 				75559CA22AE00791005C7AF5 /* TestPlans */,
 				75625F532ADE76C800F3E589 /* PlacesFeed */,
