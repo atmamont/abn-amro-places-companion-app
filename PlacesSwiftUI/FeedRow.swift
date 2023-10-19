@@ -32,11 +32,20 @@ struct FeedRow: View {
 }
 
 #Preview {
-    FeedRow(
-        location: LocationViewModel(
-            name: "Amsterdam",
-            latitude: "1.2323",
-            longitude: "1.324343"
+    VStack {
+        FeedRow(
+            location: LocationViewModel(
+                name: nil,
+                latitude: "1.2323",
+                longitude: "1.324343"
+            )
         )
-    )
+        FeedRow(
+            location: LocationViewModel(
+                name: "Amsterdam",
+                latitude: "1.2323",
+                longitude: "1.324343"
+            )
+        )
+    }
 }

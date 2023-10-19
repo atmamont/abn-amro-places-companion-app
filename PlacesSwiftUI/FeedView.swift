@@ -29,7 +29,6 @@ struct FeedView: View {
     }
 }
 
-
 #Preview {
     FeedView(feed: FeedViewModel.prototype)
 }
