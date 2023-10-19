@@ -11,8 +11,7 @@ import SwiftUI
 struct PlacesSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            let feed = FeedViewModel()
-            FeedView(feed: feed)
+            FeedUIComposer.composeFeed()
         }
     }
 }

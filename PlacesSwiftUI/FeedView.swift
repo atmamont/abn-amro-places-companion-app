@@ -9,26 +9,33 @@ import SwiftUI
 
 
 struct FeedView: View {
-    @State var feed: FeedViewModel
+    @State var feed: FeedViewModelProtocol
     
     var body: some View {
         NavigationView {
-            List(feed.items) { location in
-                VStack {
-                    Text(location.name)
-                    HStack {
-                        Text("\(location.latitude)")
-                        Text("\(location.longitude)")
+            if feed.isLoading {
+                ProgressView()
+            } else {
+                List(feed.items) { location in
+                    VStack {
+                        if let name = location.name {
+                            Text(name)
+                        }
+                        HStack {
+                            Text("\(location.latitude)")
+                            Text("\(location.longitude)")
+                        }
+                    }
+                    .onTapGesture {
+                        feed.openExternalURL(for: location)
                     }
                 }
-                .onTapGesture {
-                    feed.openExternalURL(for: location)
-                }
+                .navigationTitle("Locations")
             }
-            .navigationTitle("Locations")
         }
         .padding()
         .navigationViewStyle(.stack)
+        .onAppear(perform: feed.loadFeed)
     }
 }
 

@@ -8,15 +8,36 @@
 import SwiftUI
 import PlacesFeed
 
-@Observable final class FeedViewModel {
-    var items: [Location] = [Location(name: "Amsterdam", latitude: 1, longitude: 1)]
+protocol FeedViewModelProtocol {
+    var items: [Location] { get }
+    var isLoading: Bool { get }
+    
+    func loadFeed()
+    func openExternalURL(for location: Location)
+}
+
+@Observable final class FeedViewModel: FeedViewModelProtocol {
+    private let loader: FeedLoader
+
+    var items: [Location] = []
+    private(set) var isLoading: Bool = false
+    
+    init(loader: FeedLoader) {
+        self.loader = loader
+    }
+
+    func loadFeed() {
+        isLoading = true
+        loader.load { [weak self] result in
+            self?.isLoading = false
+            if let feed = try? result.get() {
+                self?.items = feed
+            }
+        }
+    }
 }
 
 extension FeedViewModel {
-    static var prototype: FeedViewModel {
-        FeedViewModel()
-    }
-    
     func openExternalURL(for location: Location) {
         if let externalURL = makeURL(from: location), UIApplication.shared.canOpenURL(externalURL) {
             UIApplication.shared.open(externalURL)
@@ -41,5 +62,15 @@ extension FeedViewModel {
 extension Location: Identifiable {
     public var id: String {
         "\(latitude),\(longitude),\(name)"
+    }
+}
+
+extension FeedViewModel {
+    static var prototype: FeedViewModel {
+        FeedViewModel(loader: MockLoader())
+    }
+    
+    private final class MockLoader: FeedLoader {
+        func load(completion: @escaping (LoadResult) -> Void) {}
     }
 }

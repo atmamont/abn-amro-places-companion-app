@@ -63,7 +63,7 @@ struct Root: Decodable {
 }
 
 struct RemoteLocation: Decodable {
-    let name: String
+    let name: String?
     let lat, long: Double
 }
 
