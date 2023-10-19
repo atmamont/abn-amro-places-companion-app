@@ -7,9 +7,8 @@
 
 import SwiftUI
 
-
 struct FeedView: View {
-    @State var feed: FeedViewModelProtocol
+    @State var feed: FeedViewModel
     
     var body: some View {
         NavigationView {

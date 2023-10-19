@@ -8,18 +8,17 @@
 import SwiftUI
 import PlacesFeed
 
-protocol FeedViewModelProtocol {
-    var items: [Location] { get }
-    var isLoading: Bool { get }
-    
-    func loadFeed()
-    func openExternalURL(for location: Location)
+struct LocationViewModel {
+    let name: String?
+    let latitude: String
+    let longitude: String
 }
 
-@Observable final class FeedViewModel: FeedViewModelProtocol {
+@Observable 
+final class FeedViewModel {
     private let loader: FeedLoader
 
-    var items: [Location] = []
+    var items: [LocationViewModel] = []
     private(set) var isLoading: Bool = false
     
     init(loader: FeedLoader) {
@@ -30,21 +29,31 @@ protocol FeedViewModelProtocol {
         isLoading = true
         loader.load { [weak self] result in
             self?.isLoading = false
-            if let feed = try? result.get() {
-                self?.items = feed
+            if let feed = try? result.get(), let mappedFeed = self?.map(feed) {
+                self?.items = mappedFeed
             }
+        }
+    }
+    
+    private func map(_ feed: [Location]) -> [LocationViewModel] {
+        feed.map {
+            LocationViewModel(
+                name: $0.name,
+                latitude: "\($0.latitude)",
+                longitude: "\($0.longitude)"
+            )
         }
     }
 }
 
 extension FeedViewModel {
-    func openExternalURL(for location: Location) {
+    func openExternalURL(for location: LocationViewModel) {
         if let externalURL = makeURL(from: location), UIApplication.shared.canOpenURL(externalURL) {
             UIApplication.shared.open(externalURL)
         }
     }
     
-    private func makeURL(from location: Location) -> URL? {
+    private func makeURL(from location: LocationViewModel) -> URL? {
         var components = URLComponents()
         components.scheme = "wikpedia"
         components.host = "places"
@@ -52,16 +61,19 @@ extension FeedViewModel {
         return components.url
     }
 
-    private func makeQueryItems(from location: Location) -> [URLQueryItem] {
-        [URLQueryItem(name: "latitude", value: "\(location.latitude)"),
-         URLQueryItem(name: "longitude", value: "\(location.latitude)"),
-         URLQueryItem(name: "name", value: "\(location.name)")]
+    private func makeQueryItems(from location: LocationViewModel) -> [URLQueryItem] {
+        var items = [URLQueryItem(name: "latitude", value: location.latitude),
+                     URLQueryItem(name: "longitude", value: location.latitude)]
+        if let name = location.name {
+            items.append(URLQueryItem(name: "name", value: name))
+        }
+        return items
     }
 }
 
-extension Location: Identifiable {
+extension LocationViewModel: Identifiable {
     public var id: String {
-        "\(latitude),\(longitude),\(name)"
+        "\(latitude),\(longitude)"
     }
 }
 

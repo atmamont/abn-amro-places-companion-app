@@ -1,12 +1,12 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "Latitude: %lf" : {
+    "Latitude: %@" : {
       "localizations" : {
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Широта: %lf"
+            "value" : "Широта: %@"
           }
         }
       }
@@ -21,12 +21,12 @@
         }
       }
     },
-    "Longitude: %lf" : {
+    "Longitude: %@" : {
       "localizations" : {
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Довгота: %lf"
+            "value" : "Довгота: %@"
           }
         }
       }
