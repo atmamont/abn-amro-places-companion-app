@@ -14,7 +14,7 @@ final class FeedUIComposer {
     static func composeFeed() -> FeedView {
         let httpClient = URLSessionHTTPClient()
         let loader = RemoteFeedLoader(client: httpClient)
-        let feed = FeedViewModel(loader: loader)
+        let feed = FeedViewModel(loader: loader, urlProvider: ExternalURLProvider())
         return FeedView(feed: feed)
     }
 }

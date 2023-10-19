@@ -17,12 +17,14 @@ struct LocationViewModel {
 @Observable 
 final class FeedViewModel {
     private let loader: FeedLoader
+    private let urlProvider: ExternalURLProviding
 
     var items: [LocationViewModel] = []
     private(set) var isLoading: Bool = false
     
-    init(loader: FeedLoader) {
+    init(loader: FeedLoader, urlProvider: ExternalURLProviding) {
         self.loader = loader
+        self.urlProvider = urlProvider
     }
 
     func loadFeed() {
@@ -48,26 +50,10 @@ final class FeedViewModel {
 
 extension FeedViewModel {
     func openExternalURL(for location: LocationViewModel) {
-        if let externalURL = makeURL(from: location), UIApplication.shared.canOpenURL(externalURL) {
+        let externalURL = urlProvider.makeURL(from: location)
+        if UIApplication.shared.canOpenURL(externalURL) {
             UIApplication.shared.open(externalURL)
         }
-    }
-    
-    private func makeURL(from location: LocationViewModel) -> URL? {
-        var components = URLComponents()
-        components.scheme = "wikpedia"
-        components.host = "places"
-        components.queryItems = makeQueryItems(from: location)
-        return components.url
-    }
-
-    private func makeQueryItems(from location: LocationViewModel) -> [URLQueryItem] {
-        var items = [URLQueryItem(name: "latitude", value: location.latitude),
-                     URLQueryItem(name: "longitude", value: location.latitude)]
-        if let name = location.name {
-            items.append(URLQueryItem(name: "name", value: name))
-        }
-        return items
     }
 }
 
@@ -79,7 +65,7 @@ extension LocationViewModel: Identifiable {
 
 extension FeedViewModel {
     static var prototype: FeedViewModel {
-        FeedViewModel(loader: MockLoader())
+        FeedViewModel(loader: MockLoader(), urlProvider: MockURLProvider())
     }
     
     private final class MockLoader: FeedLoader {
@@ -88,6 +74,12 @@ extension FeedViewModel {
                 [Location(name: nil, latitude: 40.4380638, longitude: -3.7495758),
                  Location(name: "Amsterdam", latitude: 52.3547498, longitude: 4.8339215)
             ]))
+        }
+    }
+    
+    private final class MockURLProvider: ExternalURLProviding {
+        func makeURL(from location: LocationViewModel) -> URL {
+            URL(string: "http://any-url.com")!
         }
     }
 }
