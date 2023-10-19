@@ -29,6 +29,7 @@
 		7560AA482AE172AD008986AE /* ExternalURLProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7560AA472AE172AD008986AE /* ExternalURLProvider.swift */; };
 		7560AA502AE181CC008986AE /* FeedViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7560AA4F2AE181CC008986AE /* FeedViewModels.swift */; };
 		7560AA532AE1834D008986AE /* LocationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7560AA522AE1834D008986AE /* LocationViewModelTests.swift */; };
+		7560AA552AE18AFC008986AE /* XCTestCase+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75559C952ADE79E8005C7AF5 /* XCTestCase+Helpers.swift */; };
 		75625F5A2ADE76C800F3E589 /* PlacesFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75625F512ADE76C800F3E589 /* PlacesFeed.framework */; };
 		75625F6B2ADE77F100F3E589 /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75625F6A2ADE77F100F3E589 /* FeedLoader.swift */; };
 /* End PBXBuildFile section */
@@ -233,9 +234,9 @@
 			children = (
 				7560AA542AE1868D008986AE /* PlacesSwiftUI.xctestplan */,
 				75559C9F2ADE83E8005C7AF5 /* README.MD */,
+				75559CA22AE00791005C7AF5 /* TestPlans */,
 				75625F532ADE76C800F3E589 /* PlacesFeed */,
 				75625F5D2ADE76C800F3E589 /* PlacesFeedTests */,
-				75559CA22AE00791005C7AF5 /* TestPlans */,
 				75559CAB2AE00849005C7AF5 /* PlacesSwiftUI */,
 				75559CBC2AE0084A005C7AF5 /* PlacesSwiftUITests */,
 				75625F522ADE76C800F3E589 /* Products */,
@@ -463,6 +464,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7560AA552AE18AFC008986AE /* XCTestCase+Helpers.swift in Sources */,
 				7560AA532AE1834D008986AE /* LocationViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
