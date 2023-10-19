@@ -15,6 +15,6 @@ final class FeedUIComposer {
         let httpClient = URLSessionHTTPClient()
         let loader = RemoteFeedLoader(client: httpClient)
         let viewModel = LocationFeedViewModel(loader: loader)
-        return FeedView(feed: viewModel, urlProvider: ExternalURLProvider())
+        return FeedView(feed: viewModel, urlProvider: WikipediaDeplinkURLProvider())
     }
 }
