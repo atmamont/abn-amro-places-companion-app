@@ -9,17 +9,17 @@ import Foundation
 import PlacesFeed
 
 @Observable
-class LocationFeedViewModel: FeedViewModel {
+public class LocationFeedViewModel: FeedViewModel {
     private let loader: FeedLoader
 
-    var items: [LocationViewModel] = []
-    private(set) var isLoading: Bool = false
+    public var items: [LocationViewModel] = []
+    private(set) public var isLoading: Bool = false
     
-    init(loader: FeedLoader) {
+    public init(loader: FeedLoader) {
         self.loader = loader
     }
 
-    func loadFeed() {
+    public func loadFeed() {
         isLoading = true
         loader.load { [weak self] result in
             self?.isLoading = false
