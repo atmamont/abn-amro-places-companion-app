@@ -1,0 +1,36 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Latitude: %lf" : {
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Широта: %lf"
+          }
+        }
+      }
+    },
+    "Locations" : {
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Локації"
+          }
+        }
+      }
+    },
+    "Longitude: %lf" : {
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Довгота: %lf"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
