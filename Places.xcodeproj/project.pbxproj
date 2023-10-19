@@ -24,11 +24,11 @@
 		75559CD62AE0085C005C7AF5 /* PlacesFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 75625F512ADE76C800F3E589 /* PlacesFeed.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		75559CDB2AE00C8F005C7AF5 /* LocationFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75559CDA2AE00C8F005C7AF5 /* LocationFeedViewModel.swift */; };
 		755E87142AE1BF9400A1335C /* WikipediaDeplinkURLProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E87132AE1BF9400A1335C /* WikipediaDeplinkURLProviderTests.swift */; };
+		755E87162AE1C4A100A1335C /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E87152AE1C4A100A1335C /* LocationViewModel.swift */; };
 		7560AA422AE11659008986AE /* FeedUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7560AA412AE11659008986AE /* FeedUIComposer.swift */; };
 		7560AA442AE12FCE008986AE /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7560AA432AE12FCE008986AE /* Localizable.xcstrings */; };
 		7560AA462AE15A9C008986AE /* FeedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7560AA452AE15A9C008986AE /* FeedRow.swift */; };
 		7560AA482AE172AD008986AE /* WikipediaDeplinkURLProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7560AA472AE172AD008986AE /* WikipediaDeplinkURLProvider.swift */; };
-		7560AA502AE181CC008986AE /* FeedViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7560AA4F2AE181CC008986AE /* FeedViewModels.swift */; };
 		7560AA532AE1834D008986AE /* LocationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7560AA522AE1834D008986AE /* LocationViewModelTests.swift */; };
 		7560AA552AE18AFC008986AE /* XCTestCase+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75559C952ADE79E8005C7AF5 /* XCTestCase+Helpers.swift */; };
 		75625F5A2ADE76C800F3E589 /* PlacesFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75625F512ADE76C800F3E589 /* PlacesFeed.framework */; };
@@ -94,11 +94,11 @@
 		75559CDA2AE00C8F005C7AF5 /* LocationFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFeedViewModel.swift; sourceTree = "<group>"; };
 		75559CDC2AE0135F005C7AF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		755E87132AE1BF9400A1335C /* WikipediaDeplinkURLProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaDeplinkURLProviderTests.swift; sourceTree = "<group>"; };
+		755E87152AE1C4A100A1335C /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		7560AA412AE11659008986AE /* FeedUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIComposer.swift; sourceTree = "<group>"; };
 		7560AA432AE12FCE008986AE /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		7560AA452AE15A9C008986AE /* FeedRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRow.swift; sourceTree = "<group>"; };
 		7560AA472AE172AD008986AE /* WikipediaDeplinkURLProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaDeplinkURLProvider.swift; sourceTree = "<group>"; };
-		7560AA4F2AE181CC008986AE /* FeedViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModels.swift; sourceTree = "<group>"; };
 		7560AA522AE1834D008986AE /* LocationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModelTests.swift; sourceTree = "<group>"; };
 		7560AA542AE1868D008986AE /* PlacesSwiftUI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = PlacesSwiftUI.xctestplan; sourceTree = "<group>"; };
 		75625F512ADE76C800F3E589 /* PlacesFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlacesFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,8 +222,8 @@
 		7560AA4E2AE181A4008986AE /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				7560AA4F2AE181CC008986AE /* FeedViewModels.swift */,
 				75559CDA2AE00C8F005C7AF5 /* LocationFeedViewModel.swift */,
+				755E87152AE1C4A100A1335C /* LocationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -463,7 +463,7 @@
 				7560AA482AE172AD008986AE /* WikipediaDeplinkURLProvider.swift in Sources */,
 				75559CDB2AE00C8F005C7AF5 /* LocationFeedViewModel.swift in Sources */,
 				75559CAD2AE00849005C7AF5 /* PlacesSwiftUIApp.swift in Sources */,
-				7560AA502AE181CC008986AE /* FeedViewModels.swift in Sources */,
+				755E87162AE1C4A100A1335C /* LocationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

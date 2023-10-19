@@ -37,7 +37,7 @@ struct CustomLocationView: View {
             VStack(alignment: .center) {
                 Button("Open") {
                     openExternalURL(for: viewModel)
-                }
+                }.disabled(!viewModel.isValid)
             }
             Spacer()
         }
@@ -46,9 +46,7 @@ struct CustomLocationView: View {
 
     private func openExternalURL(for location: LocationViewModel) {
         let externalURL = urlProvider.makeURL(from: location)
-        if UIApplication.shared.canOpenURL(externalURL) {
-            UIApplication.shared.open(externalURL)
-        }
+        UIApplication.shared.open(externalURL)
     }
 }
 

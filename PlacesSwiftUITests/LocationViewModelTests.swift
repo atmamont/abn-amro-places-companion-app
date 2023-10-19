@@ -22,7 +22,7 @@ final class LocationViewModelTests: XCTestCase {
         
         let items = [Location]()
         let expectedViewModels = items.map {
-            LocationViewModel(name: $0.name, latitude: $0.latitude,longitude: $0.longitude)
+            LocationViewModel(name: $0.name ?? "", latitude: $0.latitude,longitude: $0.longitude)
         }
 
         withObservationTracking {

@@ -22,7 +22,7 @@ struct FeedView: View {
                             openExternalURL(for: location)
                     }
                 }
-                .navigationTitle("Pick location to open in Wikipedia")
+                .navigationTitle("Pick location")
                 .toolbar(content: {
                     NavigationLink("Open custom location", destination: CustomLocationView(viewModel: LocationViewModel(), urlProvider: urlProvider))
                                   
@@ -35,9 +35,7 @@ struct FeedView: View {
     
     private func openExternalURL(for location: LocationViewModel) {
         let externalURL = urlProvider.makeURL(from: location)
-        if UIApplication.shared.canOpenURL(externalURL) {
-            UIApplication.shared.open(externalURL)
-        }
+        UIApplication.shared.open(externalURL)
     }
 
 }

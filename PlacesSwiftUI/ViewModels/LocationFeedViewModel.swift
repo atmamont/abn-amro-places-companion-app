@@ -8,6 +8,13 @@
 import Foundation
 import PlacesFeed
 
+public protocol FeedViewModel {
+    var isLoading: Bool { get }
+    var items: [LocationViewModel] { get }
+    
+    func loadFeed()
+}
+
 @Observable
 public class LocationFeedViewModel: FeedViewModel {
     private let loader: FeedLoader
