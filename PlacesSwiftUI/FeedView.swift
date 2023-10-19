@@ -16,30 +16,14 @@ struct FeedView: View {
                 ProgressView()
             } else {
                 List(feed.items) { location in
-                    HStack(alignment: .firstTextBaseline) {
-                        Image(systemName: "location.circle")
-                        VStack(alignment: .listRowSeparatorLeading) {
-                            if let name = location.name {
-                                Text(name)
-                                    .font(.title)
-                            }
-                            VStack(alignment: .listRowSeparatorLeading)
-                            {
-                                Text("Latitude: \(location.latitude)")
-                                    .font(.subheadline)
-                                Text("Longitude: \(location.longitude)")
-                                    .font(.subheadline)
-                            }
-                        }
+                    FeedRow(location: location)
                         .onTapGesture {
                             feed.openExternalURL(for: location)
-                        }
                     }
                 }
                 .navigationTitle("Locations")
             }
         }
-        .padding()
         .navigationViewStyle(.stack)
         .onAppear(perform: feed.loadFeed)
     }
