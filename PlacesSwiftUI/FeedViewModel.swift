@@ -71,6 +71,11 @@ extension FeedViewModel {
     }
     
     private final class MockLoader: FeedLoader {
-        func load(completion: @escaping (LoadResult) -> Void) {}
+        func load(completion: @escaping (LoadResult) -> Void) {
+            completion(.success(
+                [Location(name: nil, latitude: 40.4380638, longitude: -3.7495758),
+                 Location(name: "Amsterdam", latitude: 52.3547498, longitude: 4.8339215)
+            ]))
+        }
     }
 }
