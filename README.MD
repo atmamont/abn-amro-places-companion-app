@@ -8,7 +8,8 @@ To open the Wikipedia app using a deep link, the following steps are required:
 - Adjust the logic to be consistent with the existing codebase.
 - Attempt to reuse the existing mechanism instead of creating new solutions.
 
-You can find the diff with changes made [here](https://github.com/wikimedia/wikipedia-ios/compare/main...atmamont:wikipedia-ios-abn-amro-assignment:feature/places_deep_link).
+Modified Wikipedia app branch is [here](https://github.com/atmamont/wikipedia-ios-abn-amro-assignment/tree/feature/places_deep_link)  
+The diff with changes made is  [here](https://github.com/wikimedia/wikipedia-ios/compare/main...atmamont:wikipedia-ios-abn-amro-assignment:feature/places_deep_link).
 
 In short, the logic is as follows:
 
